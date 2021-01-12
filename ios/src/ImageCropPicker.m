@@ -507,7 +507,9 @@ RCT_EXPORT_METHOD(compressVideo:(NSDictionary *)options
     PHVideoRequestOptions *options = [[PHVideoRequestOptions alloc] init];
     options.version = PHVideoRequestOptionsVersionOriginal;
     options.networkAccessAllowed = YES;
+    options.deliveryMode = PHVideoRequestOptionsDeliveryModeHighQualityFormat;
 
+    
     [manager
      requestAVAssetForVideo:forAsset
      options:options
